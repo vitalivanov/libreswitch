@@ -5,7 +5,7 @@ compiler: gcc
 
 branches:
   only:
-  - master
+  - all-platform-ci
   - "/^release.*$/"
 
 env:
