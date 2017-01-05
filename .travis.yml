@@ -10,6 +10,13 @@ branches:
 
 env:
 - PLATFORM=appliance
+- PLATFORM=as5712
+- PLATFORM=as5812t
+- PLATFORM=as5812x
+- PLATFORM=as6712
+- PLATFORM=as7512
+- PLATFORM=as7712
+- PLATFORM=mlnx-sn2xxx
 - PLATFORM=genericx86-64
 
 addons:
