@@ -31,6 +31,10 @@ install: true
 script:
 - travis_wait 120 make configure $PLATFORM
 - travis_wait 120 make kernel
+- travis_wait 120 make bake RECIPE="glibc"
+- travis_wait 120 make bake RECIPE="ops-quagga"
+- travis_wait 120 make bake RECIPE="python"
+- travis_wait 120 make fs
 - travis_wait 120 make
 
 before_deploy:
