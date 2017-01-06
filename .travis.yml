@@ -29,8 +29,9 @@ before_install:
 install: true
 
 script:
-- make configure $PLATFORM
-- travis_wait 1000 make
+- travis_wait 120 make configure $PLATFORM
+- travis_wait 120 make kernel
+- travis_wait 120 make
 
 before_deploy:
 - openssl aes-256-cbc -K $encrypted_2b923ab06c69_key -iv $encrypted_2b923ab06c69_iv
