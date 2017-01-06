@@ -54,3 +54,10 @@ notifications:
   on_success: change
   on_failure: always
   on_start: never
+
+after_failure:
+- df -h
+- du -sh /home/travis/build/vitalivanov/libreswitch/build/downloads
+- du -sh /home/travis/build/vitalivanov/libreswitch/build/tmp
+- du -sh /home/travis/build/vitalivanov/libreswitch/build/sstate-cache
+- ls -la /home/travis/build/vitalivanov/libreswitch/build/
