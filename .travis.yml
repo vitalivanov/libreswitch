@@ -33,7 +33,7 @@ script:
 - travis_wait 50 make kernel
 - travis_wait 50 make bake RECIPE="glibc"
 - travis_wait 50 make bake RECIPE="python"
-- travis_wait 50 make bake RECIPE="ops-quagga"
+  #- travis_wait 50 make bake RECIPE="ops-quagga"
 - travis_wait 50 make fs
 - travis_wait 50 make
 
