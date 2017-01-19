@@ -55,7 +55,7 @@ MACHINE = "##PLATFORM##"
 #
 # The default is a sstate-cache directory under TOPDIR.
 #
-#SSTATE_DIR ?= "${TOPDIR}/sstate-cache"
+SSTATE_DIR ?= "/home/travis/sstate-cache"
 
 #
 # Where to place the build output
@@ -203,7 +203,8 @@ BB_DISKMON_DIRS = "\
 # at the end as shown in the examples below. This will be substituted with the
 # correct path within the directory structure.
 SSTATE_MIRRORS ?= "\
-file://.* https://##DISTRO_SSTATE_ADDRESS##/PATH"
+file://.* http://yocto.libreswitch.org/sstate-cache/PATH \n \
+file://.* file:///home/travis/sstate-cache/PATH"
 
 SOURCE_MIRROR_URL ?= "https://##DISTRO_ARCHIVE_ADDRESS##/"
 INHERIT += "own-mirrors" 
