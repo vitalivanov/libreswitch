@@ -38,7 +38,7 @@ install: true
 
 script:
 - make configure $PLATFORM
-- travis_wait 50 make
+- travis_wait 120 make
 
 before_deploy:
 - cd $TRAVIS_BUILD_DIR ; openssl aes-256-cbc -K $encrypted_2b923ab06c69_key -iv $encrypted_2b923ab06c69_iv
